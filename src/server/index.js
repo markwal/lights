@@ -38,15 +38,12 @@ app.use(express.static("dist"));
 io.on('connection', function(socket) {
   console.log('a user connected');
   socket.on('lights_on', function() {
-    console.log('a user clicked light:on');
     send_command('white');
   });
   socket.on('lights_off', function() {
-    console.log('a user clicked light:on');
     send_command('off');
   });
   socket.on('run_rainbow', function() {
-    console.log('a user clicked light:on');
     send_command('rainbow');
   });
 });

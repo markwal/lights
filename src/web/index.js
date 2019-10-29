@@ -1,7 +1,5 @@
 const socket = io();
 
-$( "button" ).click(function() {
-  console.log("button click");
-  console.log(this.id);
+$( "label" ).click(function() {
   socket.emit(this.id);
 });
