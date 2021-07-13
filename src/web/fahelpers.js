@@ -1,9 +1,5 @@
 var Handlebars  = require('handlebars');
-var fontawesome = require('@fortawesome/fontawesome');
-var light       = require('@fortawesome/fontawesome-pro-light').default;
-
-// Adds all the icons from the Solid style into our library for easy lookup
-fontawesome.library.add(light)
+var fontawesome = require('@fortawesome/fontawesome-pro');
 
 Handlebars.registerHelper('fontawesome-css', function () {
   return new Handlebars.SafeString(

@@ -12,7 +12,7 @@ function send_command(command) {
     .then(function (ports) {
       var port_info = ports.find(function(port) { return 'vendorId' in port && port.vendorId == '239a'; });
       if (port_info) {
-        var port = new SerialPort(port_info.comName, {baudRate: 115200});
+        var port = new SerialPort(port_info.path, {baudRate: 115200});
         var parser = port.pipe(new Readline());
         port.pipe(parser);
         parser.on('data', console.log);
